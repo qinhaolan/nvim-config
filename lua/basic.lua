@@ -121,6 +121,12 @@ if vim.g.neovide then
 	vim.g.neovide_cursor_animation_length=0.1
 	--禁用光标抗锯齿，解决某些字符显示不全的问题
 	vim.g.neovide_cursor_antialiasing = true
+	--切换到英文输入法
+	vim.fn.system({
+		"im-select.exe",
+		"1033",
+	})
+	
 end
 
 
